@@ -13,6 +13,8 @@
         <module>cloud-common-entity</module>
         <module>cloud-server-eureka5000</module>
         <module>cloud-server-eureka5001</module>
+        <module>cloud-provider-payment8006</module>
+        <module>cloud-consumer-consul-order11500</module>
     </modules>
     <packaging>pom</packaging>
 

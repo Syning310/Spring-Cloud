@@ -19,3 +19,4 @@ eureka:
 
       # 指向自己则是
       # defaultZone: http://eureka5000.com:5000/eureka/
+
