@@ -1,30 +1,9 @@
 server:
-  port: 8001
+  port: 11000
 
 spring:
   application:
-    name: cloud-payment-service
-
-  datasource:
-
-    type: com.alibaba.druid.pool.DruidDataSource
-    driver-class-name: com.mysql.cj.jdbc.Driver
-
-    url: jdbc:mysql://localhost:3306/cloud?serverTimezone=UTC
-
-    username: root
-    password: syning
-
-
-mybatis:
-  mapper-locations: classpath:mybatis/mapper/*.xml
-  type-aliases-package: com.syning.entity   # 所有entity别名类所在包
-
-
-logging:
-  level:
-    com.syning.mapper: debug
-    com.syning.test: debug
+    name: cloud-order-consumer
 
 
 eureka:
@@ -43,8 +22,5 @@ eureka:
 
       # 集群版本，同时注册进入多个注册中心
       defaultZone: http://eureka5000.com:5000/eureka/,http://eureka5001.com/eureka/
-
-
-
 
 

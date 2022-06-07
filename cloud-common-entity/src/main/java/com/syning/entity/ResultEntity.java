@@ -37,6 +37,15 @@ public class ResultEntity <T> {
     }
 
     /**
+     *  请求处理成功，并且返回成功消息和数据
+     * @param data 处理成功返回的数据
+     */
+    public static <Type> ResultEntity<Type> successWithData(String message, Type data) {
+        return new ResultEntity<>(SUCCESS, message, data);
+    }
+
+
+    /**
      *  请求处理失败后，使用的工具方法
      * @param message 处理失败的错误消息
      */

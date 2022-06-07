@@ -1,11 +1,12 @@
 package com.syning;
 
-import com.syning.mapper.PaymentMapper;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.ApplicationContext;
 
+@EnableEurekaClient
 @MapperScan("com.syning.mapper")
 @SpringBootApplication
 public class PaymentMain {

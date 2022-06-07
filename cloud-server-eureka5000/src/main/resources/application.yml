@@ -1,0 +1,21 @@
+server:
+  port: 5000
+
+eureka:
+  instance:
+    hostname: eureka5000.com   # eureka服务端的实例名称
+
+  client:
+    # false表示不想注册中心注册自己
+    register-with-eureka: false
+
+    # false表示自己就是注册中心，职责就是维护服务实例，并不需要去检索服务
+    fetch-registry: false
+
+    # 相互注册，相互守望
+    service-url:
+      defaultZone: http://eureka5001.com:5001/eureka/    # 集群就是指向其他eureka，单机则是指向自己
+
+
+      # 指向自己则是
+      # defaultZone: http://eureka5000.com:5000/eureka/
