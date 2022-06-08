@@ -1,6 +1,6 @@
 server:
-  port: 8001
-#  port: 8002
+#  port: 8001
+  port: 8002
 
 spring:
   application:
@@ -47,9 +47,9 @@ eureka:
 
   instance:
     # 注册到eureka的提供方，指定实例的id
-    instance-id: payment8001
+#    instance-id: payment8001
 
-#    instance-id: payment8002
+    instance-id: payment8002
 
     prefer-ip-address: true   # 访问路径可以显示IP地址
 
