@@ -25,11 +25,12 @@
         </dependency>
 
 
-<!--        <dependency>-->
-<!--            <groupId>cn.hutool</groupId>-->
-<!--            <artifactId>hutool-all</artifactId>-->
-<!--            <version>5.6.5</version>-->
-<!--        </dependency>-->
+<!--        糊涂工具包           -->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.8.2</version>
+        </dependency>
 
     </dependencies>
 
