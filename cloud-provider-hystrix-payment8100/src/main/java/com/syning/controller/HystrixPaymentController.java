@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 
 
 @Slf4j
@@ -46,5 +47,16 @@ public class HystrixPaymentController {
         return result;
     }
 
+
+    @GetMapping(value = "/payment/look/port")
+    public String lookPort(HttpServletRequest request) {
+
+        int port = request.getLocalPort();
+
+        String result = "当前端口为 = " + port;
+
+        log.info("***** 端口： {}", port);
+        return result;
+    }
 
 }
