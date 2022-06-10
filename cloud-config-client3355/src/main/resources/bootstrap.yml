@@ -1,0 +1,30 @@
+server:
+  port: 3355
+
+spring:
+  application:
+    name: config-client
+
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+
+    config:
+
+      # config客户端配置
+      label: main   # 分支名称
+      name: config  # 配置文件名称
+      profile: dev  # 读取后缀       综上所述：{main}分支上的 config-dev.yaml的配置文件被读取
+
+      uri: http://localhost:3344  # 配置中心地址
+
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*" #暴露所有节点

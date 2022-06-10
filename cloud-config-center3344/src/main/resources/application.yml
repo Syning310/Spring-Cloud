@@ -1,0 +1,48 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name:  cloud-config-center  #注册进consul注册中心的微服务名字
+
+
+  cloud:
+
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+
+
+    config:
+      server:
+        git:
+          uri: https://gitee.com/syning310/springcloud-config.git   # gitee上的仓库地址
+          ####搜索目录
+          search-paths:
+            - springcloud-config
+
+          username: Syning310
+          password: shangyining0310
+
+
+      ####读取分支
+      label: main
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*" #暴露所有节点
+
+    health:
+      sensitive: false #关闭过滤敏感信息
+  endpoint:
+    health:
+      show-details: ALWAYS  #显示详细信息
+
+
+
+
