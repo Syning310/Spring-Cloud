@@ -9,14 +9,14 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cloud-config-client3355</artifactId>
+    <artifactId>cloud-config-client-3366</artifactId>
 
     <properties>
 
     </properties>
 
-    <dependencies>
 
+    <dependencies>
 
         <!--添加消息总线RabbitMQ支持-->
         <dependency>
@@ -24,12 +24,13 @@
             <artifactId>spring-cloud-starter-bus-amqp</artifactId>
         </dependency>
 
-<!--        config client           -->
+<!--        config client       -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
 
+<!--        consul      -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-consul-discovery</artifactId>
@@ -44,10 +45,8 @@
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
 
+
+
     </dependencies>
-
-
-
-
 
 </project>

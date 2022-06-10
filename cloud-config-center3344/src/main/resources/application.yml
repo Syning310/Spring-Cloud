@@ -31,17 +31,24 @@ spring:
       label: main
 
 
+  # rabbitmq相关配置
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+
+
 management:
   endpoints:
     web:
       exposure:
-        include: "*" #暴露所有节点
+        include: 'bus-refresh'   # 暴露所有节点
 
-    health:
-      sensitive: false #关闭过滤敏感信息
-  endpoint:
-    health:
-      show-details: ALWAYS  #显示详细信息
+
+
+
 
 
 
