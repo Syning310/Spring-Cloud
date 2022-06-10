@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Component
 public interface PaymentFeignService {
 
+    @GetMapping(value = "/payment/zipkin")
+    String paymentZipkin();
+
     @GetMapping(value = "/payment/consul")
     String testConsul();
 

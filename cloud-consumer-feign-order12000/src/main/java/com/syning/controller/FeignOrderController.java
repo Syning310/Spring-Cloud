@@ -17,6 +17,12 @@ public class FeignOrderController {
     @Resource
     private PaymentFeignService paymentFeignService;
 
+    @GetMapping(value = "/consumer/payment/zipkin")
+    public String testZipkin() {
+        String ret = paymentFeignService.paymentZipkin();
+        return ret;
+    }
+
     @GetMapping(value = "/consumer/payment/consul")
     public ResultEntity<String> testConsul() {
         String ret = paymentFeignService.testConsul();
