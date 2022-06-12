@@ -32,6 +32,9 @@
         <module>alibaba-cloud-provider-payment9003</module>
         <module>alibaba-cloud-consumer-order18600</module>
         <module>alibaba-cloud-openfeign-order19000</module>
+        <module>seata-order-service20000</module>
+        <module>seata-storage-service21000</module>
+        <module>seata-account-service23000</module>
     </modules>
     <packaging>pom</packaging>
 
