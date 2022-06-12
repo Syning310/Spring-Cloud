@@ -1,0 +1,32 @@
+server:
+  port: 19000
+
+spring:
+  application:
+    name: nacos-feign-order
+
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+
+    sentinel:
+      transport:
+        dashboard: localhost:8080
+        port: 8719
+
+# 激活Sentinel对Feign的支持
+#feign:
+#  sentinel:
+#    enabled: true
+
+
+# 设置feign客户端超时间(OpenFeign默认支持ribbon)
+ribbon:
+
+  #指的是建立连接所用的时间，适用于网络状况正常的情况下,两端连接所用的时间
+  ReadTimeout: 5000
+
+  #指的是建立连接后从服务器读取到可用资源所用的时间
+  ConnectTimeout: 5000
